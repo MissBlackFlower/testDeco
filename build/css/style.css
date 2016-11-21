@@ -122,9 +122,7 @@ h4 { font-family: "gp-bold", sans-serif; font-size: 15px; color: #3f4147; text-t
 
 /* END  header */
 /* BEGIN  banner */
-.banner { width: 100%; min-height: 670px; position: relative; }
-.banner-video { width: 100%; position: absolute; }
-.banner-video video { position: relative; max-width: 100%; max-height: 100%; z-index: 3; }
+.banner { width: 100%; min-height: 670px; position: relative; background: url("../img/poster.jpg") right/cover no-repeat; }
 .banner-btn-play { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); width: 90px; height: 90px; border-radius: 50%; background-color: #ffffff; text-align: center; cursor: pointer; z-index: 6; }
 .banner-btn-play i { font-size: 21px; line-height: 90px; color: #a70c5d; }
 .banner-btn-play:hover { background-color: #a70c5d; }
