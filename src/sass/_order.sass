@@ -1,0 +1,136 @@
+/* BEGIN  contacts */
+.contacts
+	width: 100%
+	padding-top: 55px
+	border-top: 1px solid $price-line
+	border-bottom: 1px solid $price-line
+	&-caption
+		padding-bottom: 11px
+	&-ttl
+	&-content
+
+.order
+	text-align: center
+	&-col
+		display: inline-block
+		vertical-align: top
+		margin: 0 20px
+		max-width: 380px
+		min-width: 320px
+		text-align: left
+	&-input
+		display: inline-block
+		width: 100%
+		padding: 29px 0 8px 0
+		border-bottom: 1px solid $light-gray
+		+bla
+		font-size: 11px
+		text-transform: uppercase
+		+placeholder
+			display: inline-block
+			+med
+			font-size: 11px
+			text-transform: uppercase
+			line-height: 1
+			color: $txt-color
+	&-subject
+		width: 100%
+	&-btn-theme
+		width: 100%
+		margin-top: 49px
+		padding: 0 20px
+		position: relative
+		text-align: left
+		background-color: $gray-bg
+		border: 1px solid $line
+		+med
+		font-size: 11px
+		text-transform: uppercase
+		line-height: 50px
+		color: $txt-color
+		transition: all .2s
+		.icon-arr
+			position: absolute
+			right: 15px
+			top: 50%
+			transform: translateY(-50%) rotate(0deg)
+			width: 22px
+			text-align: center
+			font-size: 22px
+			color: $gr-icon
+			transition: all .2s
+		&:hover
+			color: $pink
+	&-list
+		display: none
+		margin-top: -1px
+		padding: 20px 23px
+		border: 1px solid $line
+	&-service
+		width: 100%
+		padding: 5px 0
+	&-option
+		display: none
+		+ label
+			cursor: pointer
+		&:not(checked)
+			+ label
+				+reg
+				font-size: 13px
+				line-height: 1.6
+				color:  $txt-color
+				.icon-list
+					color:  $gr-icon
+					font-size: 7px
+					vertical-align: middle
+		&:checked
+			+ label
+				+b
+				color: $pink
+				.icon-list
+					color:  $pink
+	&-choice
+		.icon-list
+			padding-right: 11px
+		&:hover
+			color: $pink
+			.icon-list
+				color:  $pink
+	&-txt
+		display: inline-block
+		width: 100%
+		padding-top: 23px
+		+med
+		font-size: 11px
+		text-transform: uppercase
+		line-height: 25px
+		color: $txt-color
+	&-msg
+		width: 100%
+		height: 250px
+		padding: 14px
+		outline: none
+		resize: none
+		border: 1px solid $light-gray
+		+b
+		font-size: 15px
+		line-height: 1.333
+		color: $txt-color
+		+placeholder
+			+reg
+			font-size: 15px
+			line-height: 1.333
+			color: $txt-color
+			opacity: .5
+	&-send
+		width: 100%
+		padding: 36px 0 31px 0
+	&-btn
+		width: 180px
+		line-height: 50px
+
+.is-show
+	.icon-arr
+		transform: translateY(-50%) rotate(180deg)
+
+/* END  contacts */

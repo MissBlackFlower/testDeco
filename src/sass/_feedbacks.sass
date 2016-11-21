@@ -1,0 +1,130 @@
+/* BEGIN  feedbacks */
+
+.feedbacks
+	width: 100%
+	&-caption
+		padding: 55px 0
+	&-ttl
+	&-sub-ttl
+		text-align: center
+	&-content
+	&-list
+		width: 100%
+		text-align: left
+	&-item
+		display: inline-block
+		vertical-align: top
+		width: 315px
+		margin-left: 76px
+		&:hover
+			.icon-video,
+			.icon-quote
+				color: $pink
+			.feedbacks-profile
+				+gray-zero
+			.feedbacks-name
+				color: $pink
+	&-txt
+		display: inline-block
+		width: 100%
+		padding-bottom: 25px
+		+reg
+		font-size: 17px
+		line-height: 1.5
+	&-profile
+		display: inline-block
+		margin: 11px 0
+		width: 50px
+		height: 50px
+		border-radius: 50%
+		background-size: 140%
+		background-position: center center
+		+gray
+		transition: all .2s
+	&-name
+		display: inline-block
+		width: 100%
+		margin-bottom: 10px
+		+b
+		font-size: 13px
+		line-height: 1.538
+		color: $txt-color
+		transition: all .2s
+	&-scope
+		+reg
+		font-size: 11px
+		text-transform: uppercase
+		color: $txt-color
+	&-company
+		+b
+		font-size: 12px
+		color: $txt-color
+		border-bottom: 1px solid $under-line
+	&-video-link
+		position: relative
+		display: inline-block
+		width: 305px
+		height: 200px
+		margin: 20px 0 15px 0
+		background-position: center center
+		&:hover
+			.icon-play-mini
+				color: $pink
+	&-more
+		width: 100%
+		padding: 60px 0 40px 0
+		text-align: center
+	&-btn
+		display: inline-block
+		width: 180px
+		padding: 0 15px
+		background-color: transparent
+		+bla
+		font-size: 11px
+		line-height: 50px
+		text-transform: uppercase
+		border-radius: 25px
+		text-align: left
+		transition: all .2s
+		.icon-more
+			margin-right: 12px
+			font-size: 20px
+			color: $pink
+			vertical-align: middle
+			transition: all .2s
+		&:hover
+			background-color: $pink
+			color: $white
+			.icon-more
+				transform: rotate(180deg)
+				color: $white
+
+.icon-dot
+	font-size: 3px
+	vertical-align: middle
+	color: $pink
+.icon-quote
+	width: 100%
+	text-align: left
+	font-size: 15px
+	padding: 20px 0
+	color: $gr-icon
+	transition: all .2s
+.icon-video
+	width: 100%
+	text-align: left
+	font-size: 25px
+	padding-top: 15px
+	color: $gr-icon
+	transition: all .2s
+.icon-play-mini
+	+vcenter
+	width: 44px
+	font-size: 12px
+	line-height: 44px
+	text-align: center
+	border-radius: 50%
+	color: $tit-color
+	background-color: $white
+
+/* END  feedbacks */

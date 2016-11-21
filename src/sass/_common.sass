@@ -1,7 +1,7 @@
 // # SHORT HOWTO
 // ## Sprites
 //     .whatever
-// 			+s(codedby) 
+// 			+s(codedby)
 // ## gradient example
 //     	+g(#232323, #5c5c5c);
 //	   horizontal
@@ -21,16 +21,74 @@
 //     @each $s in a,b,c
 // 	    	#{$s}
 //				display: none
-// ## fonts
-// Save fonts to /src/fonts
-// +font(book, cytiapro-black-webfont)
-// and create mixin
-// =book
-// 	font-family: "book", Arial, sans-serif
 
 body
-	font-family: Arial, sans-serif
-	font-size: 12px
-	line-height: 1.4
-	
+	+reg
+	font-size: 15px
+	line-height: 1
+
 // common blocks
+.out
+	position: relative
+	max-width: 1240px
+	min-width: 320px
+	margin: auto
+
+.l-wrap
+	position: relative
+	max-width: 1120px
+	margin: auto
+
+a
+	text-decoration: none
+	color: inherit
+
+b
+	+b
+
+h3
+	display: inline-block
+	width: 100%
+	text-align: center
+	+b
+	font-size: 28px
+	color: $txt-color
+	text-transform: uppercase
+	line-height: 1
+	&::after
+		@extend %icon
+		display: block
+		width: 100%
+		content: $icon-line
+		text-align: center
+		font-size: 2px
+		line-height: 35px
+		color: $pink
+
+h4
+	+b
+	font-size: 15px
+	color: $txt-color
+	text-transform: uppercase
+	line-height: 1.3
+
+.pink-btn
+	border-radius: 24px
+	background-color: $pink
+	color: $white
+	+bla
+	font-size: 11px
+	text-transform: uppercase
+	transition: all .2s ease
+	&:hover
+		background-color: $white
+		box-shadow: inset -3px 3px 6px 1px $pink
+		color: $pink
+
+// effects classes
+
+.is-fixed
+	position: fixed
+	background-color: $white
+	border: 1px solid rgba(0, 0, 0, .06)
+	box-shadow: 0px 1px 0px 2px rgba(0, 0, 0, .05)

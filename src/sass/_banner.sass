@@ -1,0 +1,79 @@
+/* BEGIN  banner */
+
+.banner
+	width: 100%
+	min-height: 670px
+	position: relative
+	&-video
+		width: 100%
+		position: absolute
+		video
+			position: relative
+			max-width: 100%
+			max-height: 100%
+			z-index: 3
+	&-btn-play
+		+vcenter
+		width: 90px
+		height: 90px
+		border-radius: 50%
+		background-color: $white
+		text-align: center
+		cursor: pointer
+		z-index: 6
+		i
+			font-size: 21px
+			line-height: 90px
+			color: $pink
+		&:hover
+			background-color: $pink
+			i
+				color: $white
+	&-in
+		position: relative
+		max-width: 1000px
+		z-index: 5
+
+.info
+	padding-top: 175px
+	max-width: 450px
+	&-ttl
+		display: inline-block
+		width: 100%
+		text-align: left
+		+b
+		font-size: 30px
+		color: $tit-color
+		line-height: 1.18
+		&::after
+			@extend %icon
+			display: inline-block
+			width: 100%
+			content: $icon-line
+			text-align: left
+			font-size: 2px
+			line-height: 57px
+			color: $pink
+	&-txt
+		+reg
+		color: $tit-color
+		font-size: 15px
+		line-height: 1.6
+		p
+			padding-bottom: 24px
+	&-btn
+		display: inline-block
+		width: 180px
+		margin: 30px 0
+		padding: 0 15px
+		line-height: 50px
+		text-align: left
+		i,
+		span
+			display: inline-block
+			vertical-align: middle
+		i
+			font-size: 22px
+			margin-right: 10px
+
+/* END  banner */

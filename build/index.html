@@ -7,14 +7,276 @@
 	<meta name="format-detection" content="telephone=no">
 	<meta name="theme-color" content="#fff">
 	<link rel="stylesheet" media="all" href="css/style.css" >
-	<script src="js/app.js"></script>
 </head>
 <body>
 <!-- BEGIN  out-->
 <div class="out">
-	<i class="icon-sepa"></i>
-	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt possimus, quod eum rerum molestiae consectetur inventore autem nisi mollitia sit at dolore quam aliquam ipsum. Hic, consequatur obcaecati facere. Consectetur.
+	<!-- BEGIN  header-->
+	<header class="header">
+		<div class="l-wrap header-in">
+			<div class="header-logo">
+				<a class="icon-logo" href="index.html"></a>
+			</div>
+			<div class="header-menu">
+				<ul class="nav" id="js_nav">
+					<li class="nav-item"><a class="nav-link js_nav" href="#price">Услуги и ЦЕНЫ</a></li>
+					<li class="nav-item"><a class="nav-link js_nav" href="#feedbacks">ОТЗЫВЫ</a></li>
+					<li class="nav-item"><a class="nav-link js_nav" href="#contacts">КОНТАКТЫ</a></li>
+				</ul>
+			</div>
+			<div class="header-lang">
+				<input id="lang" type="checkbox" />
+				<label for="lang" class="lang" >
+					<span class="lang-txt lang-ua">UA</span>
+					<span class="lang-txt lang-ru">RU</span>
+				</label>
+			</div>
+		</div>
+	</header>
+	<!-- END header-->
+	
+	<!-- BEGIN  banner-->
+	<section class="banner">
+		<div class="banner-video">
+			<button class="banner-btn-play js_video-btn" type="button" name="control-video"><i class="icon-play"></i></button>
+			<video class="is-video" poster="img/poster.jpg" >
+					<source src="img/video.webm" type="video/webm">
+					<source src="img/video.mp4" type="video/mp4">
+			</video>
+		</div>
+		<div class="l-wrap banner-in">
+			<div class="info">
+				<h1 class="info-ttl entry-header">Правовое <br>сопровождение <br>малого ИТ-бизнеса</h1>
+				<div class="info-txt entry-content">
+					<p>Зачастую интернет-проекты, разработчики, маркетологи, дизайнеры, стартаперы и другие IT-специалисты не уделяют должного внимания правовым аспектам своей деятельности.</p>
+					<p>Но <b>документы должны быть в порядке</b>, и мы в этом поможем.</p>
+				</div>
+				<button class="info-btn pink-btn" type="button" name="to-price">
+					<i class="icon-arr"></i>
+					<span>услуги и цены</span>
+				</button>
+			</div>
+		</div>
+	</section>
+	<!-- END banner-->
+	
+	<!-- BEGIN  price-->
+	<section class="price" id="price">
+		<div class="price-caption entry-header">
+			<h3 class="price-ttl">услуги и цены</h3>
+			<div class="price-sub-ttl">
+				<p><b>Pravo agency</b> выполняет роль юристов-аутсорсеров, надежно прикрывая правовой тыл вашей деятельности.</p>
+			</div>
+		</div>
+		<div class="price-content entry-content">
+			<div class="l-row"><!-- комментарии это самый простой способ, чтоб убрать дефолтные отступы блоков с display: inline-block
+		 --><div class="l-col">
+					<a href="#" class="price-item js_service">
+						<i class="price-icon icon-doc"></i>
+						<h4 class="price-type">Наведение порядка<br> в делах<i class="icon-i"></i></h4>
+						<span class="price-txt">Аудит документов и платежей на предмет:</span>
+						<ul class="price-list">
+							<li>соблюдения необходимых формальностей и процедур, </li>
+							<li>наличия всех оригиналов договоров, актов,</li>
+							<li>легализация зависших платежей.</li>
+						</ul>
+					</a>
+				</div><!--
+		 --><div class="l-col js-col">
+					<a href="#" class="price-item js_service">
+						<i class="price-icon icon-dart"></i>
+						<h4 class="price-type">Оптимизация<br> договорных отношений <i class="icon-i"></i></h4>
+						<ul class="price-list">
+							<li>Доработка, латание дыр и улучшение условий основных типовых договоров вашей компании</li>
+							<li>Оформление сотрудников на оптимальных условиях ведения деятельности и налогообложения</li>
+							<li>Составление договоров, соглашений о конфиденциальности, публичных офферт</li>
+						</ul>
+					</a>
+					<div class="modal js_modal">
+						<ul class="modal-item">
+							<li class="modal-type">услуга</li>
+							<li class="modal-content">
+								<h4>Оптимизация  договорных отношений</h4>
+								<p class="modal-txt">Борьба внутри меня, и я был в самых разных ситуациях в моей жизни. <b>Таким образом, борьба, что у меня на постоянной основе, это просто пробовать и быть лучше. </b></p>
+								<p class="modal-txt">Есть определенная разница между публичным человеком и обычным человеком, это как сойти с ума - для меня во всяком случае - открыть себя целиком для всего мира. </p>
+							</li>
+						</ul>
+						<ul class="modal-item">
+							<li class="modal-type">Цена</li>
+							<li class="modal-content">
+								<ul class="modal-list">
+									<li class="modal-cell">
+										<p><b>&lt; 50</b></p>
+										<span class="modal-subtext">Сотрудников</span><br>
+										<span class="modal-subtext">от <b class="modal-price">5000</b> <b>грн.</b></span>
+									</li>
+									<li class="modal-cell">
+										<p><b>50-100</b></p>
+										<span class="modal-subtext">Сотрудников</span><br>
+										<span class="modal-subtext">от <b class="modal-price">15000</b> <b>грн.</b></span>
+									</li>
+									<li class="modal-cell">
+										<p><b>&gt; 100</b></p>
+										<span class="modal-subtext">Сотрудников</span><br>
+										<span class="modal-subtext">от <b class="modal-price">25000</b> <b>грн.</b></span>
+									</li>
+								</ul>
+								<button class="modal-btn pink-btn" type="button" name="to-contacts">заказать</button>
+							</li>
+						</ul>
+					</div>
+				</div><!--
+	 --></div>
+			<div class="l-row"><!--
+		 --><div class="l-col">
+					<a href="#" class="price-item js_service">
+						<i class="price-icon icon-law"></i>
+						<h4 class="price-type">Правовое сопровождение  деятельности (юрист-аутсорсер)<i class="icon-i"></i></h4>
+						<ul class="price-list">
+							<li>Участие в заключении договоров: минимизация рисков, усиление ваших позиций</li>
+							<li>Юридическая консультация</li>
+							<li>Дайджест предпринимательских ИТ-новостей с разъяснениями</li>
+							<li>Представительство интересов в судах</li>
+						</ul>
+					</a>
+				</div><!--
+		 --><div class="l-col">
+					<a href="#" class="price-item js_service">
+						<i class="price-icon icon-court"></i>
+						<h4 class="price-type">Разработка договоров<br> и другой документации<i class="icon-i"></i></h4>
+						<span class="price-txt">К сожалению, конфликты бывают в любой сфере. Если дело близится к суду или уже дошло до него, мы поможем отстоять ваши права и интересы.</span>
+					</a>
+				</div><!--
+	 --></div>
+		</div>
+	</section>
+	<!-- END price-->
+	
+	<!-- BEGIN  feedbacks-->
+	<section class="feedbacks" id="feedbacks">
+		<div class="feedbacks-caption entry-header">
+			<h3 class="feedbacks-ttl">отзывы</h3>
+			<div class="feedbacks-sub-ttl">
+				<p>Мнение наших клиентов <b>делает мир и нас лучше :)</b></p>
+			</div>
+		</div>
+		<div class="feedbacks-content entry-content">
+			<ul class="feedbacks-list">
+				<li class="feedbacks-item">
+					<i class="icon-quote"></i>
+					<span class="feedbacks-txt">Главная тема для меня – любовь. Мы все хотим ее, но не знаем как получить, поэтому все, что мы делаем, — это всего лишь попытки найти счастье.</span>
+					<a class="feedbacks-profile" href="#" style="background-image: url(img/feedbacks/acc1.jpg)"></a>
+					<a class="feedbacks-name" href="#">Алексей Фёдоров</a>
+					<span class="feedbacks-scope">CEO</span>
+					<i class="icon-dot"></i>
+					<a class="feedbacks-company" href="#">deco.agency</a>
+				</li>
+				<li class="feedbacks-item">
+					<i class="icon-quote"></i>
+					<span class="feedbacks-txt">Главная тема для меня – любовь. Мы все хотим ее, но не знаем как получить, поэтому все, что мы делаем, — это всего лишь попытки найти счастье.</span>
+					<a class="feedbacks-profile" href="#" style="background-image: url(img/feedbacks/acc2.jpg)"></a>
+					<a class="feedbacks-name" href="#">Артур Оруджалиев</a>
+					<span class="feedbacks-scope">CEO</span>
+					<i class="icon-dot"></i>
+					<a class="feedbacks-company" href="#">AIN.ua</a>
+				</li>
+				<li class="feedbacks-item">
+					<i class="icon-video"></i>
+					<a class="feedbacks-video-link js_popup-video" href="#" style="background-image: url(img/feedbacks/video.jpg)">
+						<i class="icon-play-mini"></i>
+					</a>
+					<a class="feedbacks-name" href="#">Григорий Маленко</a>
+					<span class="feedbacks-scope">CEO</span>
+					<i class="icon-dot"></i>
+					<a class="feedbacks-company" href="#">SERM.ua</a>
+				</li>
+			</ul>
+			<div class="feedbacks-more">
+				<button class="feedbacks-btn" type="button" name="more">
+					<i class="icon-more"></i>
+					<span>загрузить еще</span>
+				</button>
+			</div>
+		</div>
+	</section>
+	<!-- END feedbacks-->
+	
+	<!-- BEGIN  contacts-->
+	<section class="contacts" id="contacts">
+		<div class="contacts-caption entry-header">
+			<h3 class="contacts-ttl">запрос на услуги</h3>
+		</div>
+		<div class="contacts-content entry-content">
+			<form id="order" class="js_contact-form" action="index.html" method="post">
+				<div class="order">
+					<div class="order-col">
+						<input type="text" placeholder="Имя*" class="order-input">
+						<input type="tel" placeholder="телефон*" class="order-input">
+						<input type="email" placeholder="E-mail*" class="order-input">
+						<input type="text" placeholder="сайт" class="order-input">
+						<div class="order-subject">
+							<button class="order-btn-theme js_btn-subject" type="button" name="subject">
+								МЕНЯ ИНТЕРЕСУЕТ
+								<i class="icon-arr"></i>
+							</button>
+							<ul class="order-list js_subject-list">
+								<li class="order-service">
+									<input class="order-option" id="service1" type="radio" name="service" value="">
+									<label class="order-choice" for="service1"><i class="icon-list"></i> Наведение порядка в делах</label>
+								</li>
+								<li class="order-service">
+									<input class="order-option" id="service2" type="radio" name="service" value="">
+									<label class="order-choice" for="service2"><i class="icon-list"></i> Правовое сопровождение деятельности</label>
+								</li>
+								<li class="order-service">
+									<input class="order-option" id="service3" type="radio" name="service" value="">
+									<label class="order-choice" for="service3"><i class="icon-list"></i> Оптимизация договорных отношений</label>
+								</li>
+								<li class="order-service">
+									<input class="order-option" id="service4" type="radio" name="service" value="">
+									<label class="order-choice" for="service4"><i class="icon-list"></i> Разработка договоров</label>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="order-col">
+						<span class="order-txt">Дополнительная информация</span>
+						<textarea placeholder="Введите текст ..." class="order-msg"></textarea>
+					</div>
+					<div class="order-send">
+						<button  type="submit" class="order-btn pink-btn js_btn-send">Отправить</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</section>
+	<!-- END contacts-->
+	
+	<!-- BEGIN  footer-->
+	<footer class="footer">
+		<div class="footer-in">
+			<div class="footer-txt footer-company">pravo agency:</div>
+			<div class="footer-txt footer-address">01001, Киев, ул.Костёльная 9, оф.8</div>
+			<div class="footer-txt">
+				<a class="footer-link" href="tel:0673241010">+380 (67) 324 10 10</a>
+			</div>
+			<div class="footer-txt">
+				<a class="footer-link" href="mailto:hello@pravo.agency">hello@pravo.agency</a>
+			</div>
+			<div class="footer-txt">
+				<a class="footer-soc icon-fb" href="#"></a>
+				<a class="footer-soc icon-tw" href="#"></a>
+				<a class="footer-soc icon-in" href="#"></a>
+			</div>
+			<div class="footer-txt">
+				<span class="footer-copy">&copy; 2015, <b>Pravo agency</b></span>
+			</div>
+		</div>
+	</footer>
+	<!-- END footer-->
+	
 </div>
 <!-- END out-->
+<script src="js/app.js"></script>
 </body>
 </html>

@@ -1,12 +1,8 @@
 {
-	"name": "test to Deco.agency",
-	"version": "0.2.0",
+	"name": "Test_to_Deco.agency",
+	"version": "0.1.0",
 	"description": "Riverco.de gulp template",
 	"author": "Coderiver <html@coderiver.com.ua>",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/coderiver/gulp"
-	},
 	"devDependencies": {
 		"autoprefixer": "~6.3.7",
 		"browser-sync": "~2.13.0",

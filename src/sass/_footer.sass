@@ -1,0 +1,60 @@
+/* BEGIN  footer */
+
+.footer
+	width: 100%
+	padding: 30px 0
+	&-in
+		width: 320px
+		margin: auto
+		text-align: center
+	&-txt
+		display: inline-block
+		width: 100%
+	&-company
+		padding-bottom: 21px
+		+bla
+		font-size: 11px
+		text-transform: uppercase
+		color: $txt-color
+	&-address
+		+reg
+		font-size: 18px
+		color: $txt-color
+	&-link
+		display: inline-block
+		padding-top: 10px
+		+reg
+		font-size: 18px
+		line-height: 1.2
+		color: $txt-color
+		border-bottom: 1px solid transparent
+		transition: all .2s
+		&:hover
+			color: $pink
+			border-bottom: 1px solid $pink
+	&-soc
+		display: inline-block
+		width: 40px
+		height: 40px
+		margin: 23px 2px
+		border-radius: 50%
+		border: 2px solid $light-gray
+		color: $light-gray
+		line-height: 36px
+		transition: all .2s
+		&:hover
+			color: $soc
+			border-color: $soc
+	&-copy
+		+reg
+		font-size: 12px
+		color: $txt-color
+
+.icon-fb
+	font-size: 12px
+.icon-tw
+	font-size: 11px
+.icon-in
+	font-size: 13px
+
+/* END  footer */

@@ -1,0 +1,92 @@
+/* BEGIN  header */
+
+.header
+	width: 100%
+	position: absolute
+	top: 20px
+	left: 0
+	right: 0
+	z-index: 7
+	user-select: none
+	&-in
+		max-width: 1120px
+		padding: 20px 0
+		position: relative
+		text-align: right
+	&-logo
+		position: absolute
+		left: 57px
+		bottom: 15px
+		font-size: 51px
+		color: $pink
+	&-menu,
+	&-lang
+		display: inline-block
+		vertical-align: middle
+
+.nav
+	padding-right: 100px
+	&-item
+		display: inline-block
+	&-link
+		display: inline-block
+		padding: 0 13px
+		+med
+		font-size: 12px
+		line-height: 60px
+		color: $txt-color
+		text-transform: uppercase
+		transition: all .2s
+		&:hover
+			color: $pink
+
+#lang
+	display: none
+	&:not(checked)
+		+ .lang
+			> .lang-ua
+				opacity: 0
+			> .lang-ru
+				opacity: 1
+			&::after
+				content: ''
+				position: absolute
+				top: 50%
+				transform: translateY(-50%)
+				left: 9px
+				width: 18px
+				height: 18px
+				border-radius: 50%
+				background-color: $checkbox
+				transition: all .2s
+	&:checked
+		+ .lang
+			> .lang-ru
+				opacity: 0
+			> .lang-ua
+				opacity: 1
+			&::after
+				left: 37px
+
+.lang
+	position: relative
+	display: inline-block
+	padding: 0 12px
+	width: 68px
+	cursor: pointer
+	border: 2px solid $checkbox
+	border-radius: 30px
+	line-height: 30px
+	text-align: justify
+	text-align-last: justify
+	pointer-events: auto
+	z-index: 10
+	&-txt
+		+bla
+		color: $pink
+		font-size: 11px
+		transition: all .2s
+	&:hover
+		border-color: $pink
+
+/* END  header */
