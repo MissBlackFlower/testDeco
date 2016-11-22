@@ -36,15 +36,15 @@ $(document).ready(function() {
 	//  показать/скрыть модалку по клику на ссылку в блоке услуг
 	$(".js_service").on("click", function (event) {
 		var wrap = $(this).closest(".js_col"),
+				items = $(".js_service"),
 				modal = wrap.find(".js_modal");
 
 			if ($(window).width() <= 960) {
-
 				$(this).toggleClass('is-active');
 				modal.slideToggle();
 
-			} else {
-
+			} else if( $(window).width() > 960 ){
+				items.removeClass('is-active');
 				wrap.toggleClass('is-active');
 				modal.slideToggle();
 			};
@@ -96,7 +96,14 @@ $(document).ready(function() {
 		var header = $('.js_header'),
 				mobMenu = header.find(".mobile-menu"),
 				headerIn = header.find(".header-in"),
-				lang = $(".js_lang");
+				lang = $(".js_lang"),
+				cols = $(".js_col"),
+				items = $(".js_service"),
+				modals = cols.find(".js_modal");
+
+				cols.removeClass('is-active');
+				items.removeClass('is-active');
+				modals.slideUp();
 
 		if ($(window).width() >= 721 && mobMenu.length > 0) {
 				mobMenu.slideUp();

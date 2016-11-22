@@ -205,7 +205,6 @@ h4 { font-family: "gp-bold", sans-serif; font-size: 15px; color: #3f4147; text-t
 .modal-btn { margin-top: 10px; width: 130px; line-height: 45px; }
 
 .is-active::before { opacity: 1; }
-.is-active .price-item::before { opacity: 1; }
 
 /* END  price */
 /* BEGIN  feedbacks */
