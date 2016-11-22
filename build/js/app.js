@@ -106,9 +106,7 @@ $(document).ready(function() {
 		var header = $('.js_header'),
 				mobMenu = header.find(".mobile-menu"),
 				headerIn = header.find(".header-in"),
-				lang = $(".js_lang"),
-				info = $(".js_info"),
-				videoBtn = info.find(".js_video-popup");
+				lang = $(".js_lang");
 
 		if ($(window).width() >= 721 && mobMenu.length > 0) {
 				mobMenu.slideUp();
