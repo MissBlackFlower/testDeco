@@ -5,6 +5,16 @@
 	min-height: 670px
 	position: relative
 	background: url("../img/poster.jpg") right/cover no-repeat
+	+r960
+		min-height: 500px
+		&::before
+			content: ''
+			position: absolute
+			width: 100%
+			min-height: 100%
+			background-color: $white
+			opacity: 0.7
+			z-index: 4
 	// &-video
 	// 	width: 100%
 	// 	+vcenter
@@ -30,14 +40,25 @@
 			background-color: $pink
 			i
 				color: $white
+		+r1200
+			display: none
 	&-in
 		position: relative
 		max-width: 1000px
 		z-index: 5
+		+r1200
+			max-width: 1120px
+			padding: 20px
 
 .info
 	padding-top: 175px
 	max-width: 450px
+	+r960
+		max-width: 100%
+		padding-top: 150px
+		text-align: center
+	+r560
+		padding-top: 100px
 	&-ttl
 		display: inline-block
 		width: 100%
@@ -55,6 +76,12 @@
 			font-size: 2px
 			line-height: 57px
 			color: $pink
+		+r960
+			text-align: center
+			br
+				display: none
+			&::after
+				text-align: center
 	&-txt
 		+reg
 		color: $tit-color
@@ -76,5 +103,14 @@
 		i
 			font-size: 22px
 			margin-right: 10px
+		+r1200
+			margin: 10px 5px
+	&-btn-play
+		display: none
+		.icon-play
+			font-size: 18px
+			margin-left: 10px
+		+r1200
+			display: inline-block
 
 /* END  banner */

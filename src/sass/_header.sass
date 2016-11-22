@@ -6,26 +6,57 @@
 	top: 20px
 	left: 0
 	right: 0
-	z-index: 7
+	z-index: 1000
 	user-select: none
+	+r720
+		position: fixed
+		top: 0
+		background-color: $white
+		border: 1px solid rgba(0, 0, 0, .06)
+		box-shadow: 0 0 1px  2px rgba(0, 0, 0, .05)
 	&-in
 		max-width: 1120px
 		padding: 20px 0
 		position: relative
 		text-align: right
+		+r1200
+			padding: 20px
+		+r720
+			text-align: justify
+			text-align-last: justify
+		+r560
+			padding: 10px
 	&-logo
 		position: absolute
 		left: 57px
-		bottom: 15px
+		top: 50%
+		transform: translateY(-50%)
 		font-size: 51px
 		color: $pink
+		z-index: 6000
+		a
+			display: block
+		+r1200
+			left: 17px
+		+r720
+			position: static
+			display: inline-block
+			font-size: 65px
+			transform: translateY(0)
+			vertical-align: middle
 	&-menu,
 	&-lang
 		display: inline-block
 		vertical-align: middle
+		+r720
+			display: none
 
 .nav
 	padding-right: 100px
+	+r1200
+		padding-right: 10px
+	+r720
+		padding-right: 0
 	&-item
 		display: inline-block
 	&-link
@@ -44,9 +75,9 @@
 	display: none
 	&:not(checked)
 		+ .lang
-			> .lang-ua
+			.lang-ua
 				opacity: 0
-			> .lang-ru
+			.lang-ru
 				opacity: 1
 			&::after
 				content: ''
@@ -61,9 +92,9 @@
 				transition: all .2s
 	&:checked
 		+ .lang
-			> .lang-ru
+			.lang-ru
 				opacity: 0
-			> .lang-ua
+			.lang-ua
 				opacity: 1
 			&::after
 				left: 37px
@@ -79,7 +110,6 @@
 	line-height: 30px
 	text-align: justify
 	text-align-last: justify
-	pointer-events: auto
 	z-index: 10
 	&-txt
 		+bla
@@ -88,5 +118,101 @@
 		transition: all .2s
 	&:hover
 		border-color: $pink
+	&:focus
+		outline: none
 
+.btn-nav
+	position: relative
+	display: none
+	vertical-align: middle
+	width: 40px
+	height: 30px
+	background-color: transparent
+	color: $checkbox
+	z-index: 6000
+	&:before,
+	&:after,
+	span
+		position: absolute
+		content: ''
+		top: 13px
+		left: 0
+		right: 0
+		height: 4px
+		border-radius: 20px
+		background-color: $pink
+		transition: transform .3s
+	&:before
+		top: 0
+	&:after
+		top: 26px
+	span
+		will-change: opacity
+		transition: opacity .3s, transform .3s
+	+r720
+		display: inline-block
+
+.no-touchevents
+	.btn-nav
+		&:hover
+			&:before
+				width: 70%
+				transform: translate(12px, 21px) rotate(120deg)
+			&:after
+				width: 70%
+				transform: translate(0 , -5px) rotate(-120deg)
+			span
+				transform: rotate(90deg)
+
+.is-fixed
+	position: fixed
+	top: 0
+	background-color: $white
+	border: 1px solid rgba(0, 0, 0, .06)
+	box-shadow: 0 0 1px  2px rgba(0, 0, 0, .05)
+
+.is-clicked
+	.btn-nav
+		&:before
+			transform: translateY(13px) rotate(45deg)
+		&:after
+			transform: translateY(-13px) rotate(-45deg)
+		span
+			transform: translate3d(0,0,0)
+			opacity: 0
+			transform: scale(0)
+		&:before,
+		&:after,
+		span
+			box-shadow: none
+		&:hover
+			&:before
+				transform: translateY(13px) rotate(45deg)
+			&:after
+				transform: translateY(-13px) rotate(-45deg)
+
+// создаем в js при клике на .btn-nav
+.mobile-menu
+	float: left
+	width: 100%
+	padding: 5px 20px
+	text-align: center
+	background-color: $white
+	z-index: 5500
+	.header-lang,
+	.header-menu,
+	.nav,
+	.nav-item
+		display: inline-block
+		width: 100%
+	.nav-item,
+	.header-lang
+		text-align-last: center
+	.header-lang
+		margin: 10px 0
+	.nav-link
+		font-size: 20px
+		&:active
+			outline: 2px solid $pink
+			outline-offset: -2px
 /* END  header */

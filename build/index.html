@@ -12,25 +12,24 @@
 <!-- BEGIN  out-->
 <div class="out">
 	<!-- BEGIN  header-->
-	<header class="header">
+	<header class="header js_header">
 		<div class="l-wrap header-in">
-			<div class="header-logo">
-				<a class="icon-logo" href="index.html"></a>
-			</div>
-			<div class="header-menu">
+			<div class="header-logo"><a class="icon-logo" href="index.html"></a></div>
+			<div class="header-menu js_menu">
 				<ul class="nav" id="js_nav">
 					<li class="nav-item"><a class="nav-link js_nav" href="#price">Услуги и ЦЕНЫ</a></li>
 					<li class="nav-item"><a class="nav-link js_nav" href="#feedbacks">ОТЗЫВЫ</a></li>
 					<li class="nav-item"><a class="nav-link js_nav" href="#contacts">КОНТАКТЫ</a></li>
 				</ul>
 			</div>
-			<div class="header-lang">
+			<div class="header-lang js_lang">
 				<input id="lang" type="checkbox" />
 				<label for="lang" class="lang" >
 					<span class="lang-txt lang-ua">UA</span>
 					<span class="lang-txt lang-ru">RU</span>
 				</label>
 			</div>
+			<button type="button" name="button" class="btn-nav js_nav-btn"><span></span></button>
 		</div>
 	</header>
 	<!-- END header-->
@@ -39,7 +38,7 @@
 	<section class="banner">
 		<div class="l-wrap banner-in">
 			<button class="banner-btn-play js_video-popup" type="button" name="control-video"><i class="icon-play"></i></button>
-			<div class="info">
+			<div class="info js_info">
 				<h1 class="info-ttl entry-header">Правовое <br>сопровождение <br>малого ИТ-бизнеса</h1>
 				<div class="info-txt entry-content">
 					<p>Зачастую интернет-проекты, разработчики, маркетологи, дизайнеры, стартаперы и другие IT-специалисты не уделяют должного внимания правовым аспектам своей деятельности.</p>
@@ -49,6 +48,7 @@
 					<i class="icon-arr"></i>
 					<span>услуги и цены</span>
 				</button>
+				<button class="info-btn info-btn-play pink-btn js_video-popup" type="button" name="control-video"><i class="icon-play"></i><span>смотреть видео</span></button>
 			</div>
 		</div>
 	</section>
@@ -201,13 +201,13 @@
 			<h3 class="contacts-ttl">запрос на услуги</h3>
 		</div>
 		<div class="contacts-content entry-content">
-			<form id="order" class="js_contact-form" action="index.html" method="post">
+			<form id="order" class="js_contact-form" action="js/send.php" method="post">
 				<div class="order">
 					<div class="order-col">
-						<input type="text" placeholder="Имя*" class="order-input">
-						<input type="tel" placeholder="телефон*" class="order-input">
-						<input type="email" placeholder="E-mail*" class="order-input">
-						<input type="text" placeholder="сайт" class="order-input">
+						<input type="text" placeholder="Имя*" class="order-input" id="name">
+						<input type="tel" placeholder="телефон*" class="order-input" id="phone">
+						<input type="email" placeholder="E-mail*" class="order-input" id="email">
+						<input type="text" placeholder="сайт" class="order-input" id="site">
 						<div class="order-subject">
 							<button class="order-btn-theme js_btn-subject" type="button" name="subject">
 								МЕНЯ ИНТЕРЕСУЕТ
@@ -215,19 +215,19 @@
 							</button>
 							<ul class="order-list js_subject-list">
 								<li class="order-service">
-									<input class="order-option" id="service1" type="radio" name="service" value="">
+									<input class="order-option" id="service1" type="radio" name="service" value="Наведение порядка в делах">
 									<label class="order-choice" for="service1"><i class="icon-list"></i> Наведение порядка в делах</label>
 								</li>
 								<li class="order-service">
-									<input class="order-option" id="service2" type="radio" name="service" value="">
+									<input class="order-option" id="service2" type="radio" name="service" value="Правовое сопровождение деятельности">
 									<label class="order-choice" for="service2"><i class="icon-list"></i> Правовое сопровождение деятельности</label>
 								</li>
 								<li class="order-service">
-									<input class="order-option" id="service3" type="radio" name="service" value="">
+									<input class="order-option" id="service3" type="radio" name="service" value="Оптимизация договорных отношений">
 									<label class="order-choice" for="service3"><i class="icon-list"></i> Оптимизация договорных отношений</label>
 								</li>
 								<li class="order-service">
-									<input class="order-option" id="service4" type="radio" name="service" value="">
+									<input class="order-option" id="service4" type="radio" name="service" value="Разработка договоров">
 									<label class="order-choice" for="service4"><i class="icon-list"></i> Разработка договоров</label>
 								</li>
 							</ul>
@@ -235,7 +235,7 @@
 					</div>
 					<div class="order-col">
 						<span class="order-txt">Дополнительная информация</span>
-						<textarea placeholder="Введите текст ..." class="order-msg"></textarea>
+						<textarea placeholder="Введите текст ..." class="order-msg" id="msg"></textarea>
 					</div>
 					<div class="order-send">
 						<button  type="submit" class="order-btn pink-btn js_btn-send">Отправить</button>
@@ -258,9 +258,9 @@
 				<a class="footer-link" href="mailto:hello@pravo.agency">hello@pravo.agency</a>
 			</div>
 			<div class="footer-txt">
-				<a class="footer-soc icon-fb" href="#"></a>
-				<a class="footer-soc icon-tw" href="#"></a>
-				<a class="footer-soc icon-in" href="#"></a>
+				<a class="footer-soc icon-fb" target="_blank" href="#"></a>
+				<a class="footer-soc icon-tw" target="_blank" href="#"></a>
+				<a class="footer-soc icon-in" target="_blank" href="#"></a>
 			</div>
 			<div class="footer-txt">
 				<span class="footer-copy">&copy; 2015, <b>Pravo agency</b></span>

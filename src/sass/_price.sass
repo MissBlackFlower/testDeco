@@ -15,6 +15,11 @@
 		border-left: 2px dotted $dotted
 	&:first-child
 		border: none
+	+r960
+		padding: 0
+		border: none
+		&::after
+			display: none
 
 .l-col
 	width: 50%
@@ -33,15 +38,19 @@
 		color: $pink
 		opacity: 0
 		transition: all .2s
-.is-active
-	&::before
-		opacity: 1
-
+	+max
+		padding: 10px 0
+	+r960
+		width: 100%
+		&::before
+			display: none
 
 .price
 	width: 100%
 	&-caption
 		padding: 55px 0
+		+r560
+			padding: 35px 0
 	&-ttl
 	&-sub-ttl
 		display: block
@@ -49,11 +58,15 @@
 		margin: auto
 		text-align: center
 		line-height: 1.2
+		+r560
+			padding: 0 10px
 	&-content
 		width: 100%
 		padding-bottom: 8px
 		border-top: 1px solid $price-line
 		border-bottom: 1px solid $price-line
+		+r960
+			padding: 10px 0
 	&-item
 		position: relative
 		display: inline-block
@@ -62,12 +75,32 @@
 		min-height: 200px
 		padding-left: 70px
 		text-align: left
+		&::before
+			@extend %icon
+			content: $icon-modal
+			font-size: 300px
+			position: absolute
+			left: 50%
+			top: 103%
+			line-height: 0
+			transform: rotate(90deg) scaleX(-1)
+			color: $pink
+			opacity: 0
+			transition: all .2s
 		&:hover
 			.price-icon
 				color: $pink
 			.icon-i
 				color: $white
 				background-color: $pink
+		+r960
+			max-width: 470px
+			min-height: auto
+			padding-top: 10px
+			padding-bottom: 10px
+		+r560
+			max-width: 420px
+			padding: 10px
 	&-icon
 		position: absolute
 		top: 0
@@ -75,9 +108,18 @@
 		font-size: 40px
 		color: $price-icon
 		transition: all .2s
+		+r560
+			position: static
+			width: 100%
+			text-align: center
+			font-size: 70px
+			padding-bottom: 20px
 	&-type
 		position: relative
 		padding: 8px 40px 20px 0
+		+r560
+			padding: 5px 10px 50px 10px
+			text-align: center
 	.icon-i
 		position: absolute
 		right: 0
@@ -91,6 +133,11 @@
 		line-height: 26px
 		color: $txt-color
 		transition: all .2s
+		+r560
+			top: auto
+			bottom: 10px
+			right: 50%
+			transform: translate(50%, 0)
 	&-txt,
 	&-list
 		+reg
@@ -121,8 +168,16 @@
 	top: 0
 	background-color: $white
 	z-index: 10
+	+r1200
+		padding: 20px 15px 20px 10px
+	+r960
+		position: static
+		max-width: 470px
+		margin: auto
 	&-item
 		width: 100%
+	+r960
+		text-align: center
 	&-type
 		display: inline-block
 		vertical-align: top
@@ -133,6 +188,11 @@
 		text-transform: uppercase
 		line-height: 2
 		color: $txt-color
+		+r960
+			width: 100%
+			padding-bottom: 10px
+			color: $pink
+			text-align: center
 	&-content
 		display: inline-block
 		padding-left: 40px
@@ -143,6 +203,14 @@
 			font-size: 13px
 			color: $txt-color
 			line-height: 1.54
+		+r960
+			width: 100%
+			padding: 0
+			br
+				display: none
+			p
+				display: inline-block
+				width: auto
 	&-txt
 		padding-bottom: 25px
 	&-list
@@ -151,6 +219,8 @@
 	&-cell
 		float: left
 		width: calc(100%/3)
+		+r960
+			width: 100%
 	&-subtext
 		display: inline-block
 		padding-bottom: 20px
@@ -163,5 +233,12 @@
 		margin-top: 10px
 		width: 130px
 		line-height: 45px
-		
+
+.is-active
+	&::before
+		opacity: 1
+	.price-item
+		&::before
+			opacity: 1
+
 /* END  price */

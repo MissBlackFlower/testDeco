@@ -4,6 +4,8 @@
 	padding-top: 55px
 	border-top: 1px solid $price-line
 	border-bottom: 1px solid $price-line
+	+r560
+		padding-top: 35px
 	&-caption
 		padding-bottom: 11px
 	&-ttl
@@ -16,8 +18,11 @@
 		vertical-align: top
 		margin: 0 20px
 		max-width: 380px
-		min-width: 320px
+		min-width: 300px
 		text-align: left
+		+r560
+			margin: 0
+			padding: 0 10px
 	&-input
 		display: inline-block
 		width: 100%
@@ -26,6 +31,9 @@
 		+bla
 		font-size: 11px
 		text-transform: uppercase
+		+r360
+			text-align: center
+			font-size: 14px
 		+placeholder
 			display: inline-block
 			+med
@@ -61,6 +69,8 @@
 			transition: all .2s
 		&:hover
 			color: $pink
+		+r360
+			font-size: 14px
 	&-list
 		display: none
 		margin-top: -1px
@@ -83,6 +93,11 @@
 					color:  $gr-icon
 					font-size: 7px
 					vertical-align: middle
+				+r560
+					font-size: 16px
+					line-height: 2
+					.icon-list
+						font-size: 10px
 		&:checked
 			+ label
 				+b
@@ -105,6 +120,10 @@
 		text-transform: uppercase
 		line-height: 25px
 		color: $txt-color
+		+r360
+			padding-top: 50px
+			text-align: center
+			font-size: 14px
 	&-msg
 		width: 100%
 		height: 250px
@@ -116,6 +135,8 @@
 		font-size: 15px
 		line-height: 1.333
 		color: $txt-color
+		+r360
+			font-size: 18px
 		+placeholder
 			+reg
 			font-size: 15px
@@ -133,4 +154,10 @@
 	.icon-arr
 		transform: translateY(-50%) rotate(180deg)
 
+.error-box
+	padding: 5px 0
+	+reg
+	font-size: 12px
+	line-height: 1.2
+	width: 100%
 /* END  contacts */
