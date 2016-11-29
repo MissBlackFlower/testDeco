@@ -296,11 +296,11 @@ h4 { font-family: "gp-bold", sans-serif; font-size: 15px; color: #3f4147; text-t
 .footer-soc { display: inline-block; width: 40px; height: 40px; margin: 23px 2px; border-radius: 50%; border: 2px solid #dcdcdc; color: #dcdcdc; line-height: 36px; -webkit-transition: all 0.2s; transition: all 0.2s; }
 .footer-copy { font-family: "gp-regular", sans-serif; font-size: 12px; color: #3f4147; }
 
-.icon-in:hover { background-color: #287bbc; border-color: #287bbc; }
+.icon-in:hover { color: #287bbc; border-color: #287bbc; }
 
-.icon-tw:hover { background-color: #1da1f2; border-color: #1da1f2; }
+.icon-tw:hover { color: #1da1f2; border-color: #1da1f2; }
 
-.icon-fb:hover { background-color: #4a6bb8; border-color: #4a6bb8; }
+.icon-fb:hover { color: #4a6bb8; border-color: #4a6bb8; }
 
 .icon-fb { font-size: 12px; }
 
