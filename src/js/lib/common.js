@@ -13,7 +13,6 @@ $(document).ready(function() {
 	// плавный скрол к блоку услуг при клике на кнопку "услуги и цены"
 	$(".js_to-prise").on("click", function () {
 			var top = $("#price").offset().top - 70;
-
 			$('body,html').animate({scrollTop: top}, 1500);
 	});
 
@@ -24,11 +23,21 @@ $(document).ready(function() {
 					item = modal.prev(".js_service"),
 					wrap = modal.closest(".js_col");
 
-					// с задержкой по времени скрыть модельное окно
-					setTimeout(
-						"wrap.removeClass('is-active'); item.removeClass('is-active');	modal.slideUp();",
-						1000
-					);
+					wrap.removeClass('is-active');
+					item.removeClass('is-active');
+					modal.slideUp();
+					// if (wrap.hasClass('is-active')) {
+					// 	// с задержкой по времени скрыть модельное окно
+					// 	setTimeout(
+					// 		"wrap.removeClass('is-active'); modal.slideUp();",
+					// 		1000
+					// 	);
+					// } else {
+					// 	setTimeout(
+					// 		"item.removeClass('is-active'); modal.slideUp();",
+					// 		1000
+					// 	);
+					// }
 
 					$('body,html').animate({scrollTop: top}, 1500);
 	});
@@ -42,8 +51,7 @@ $(document).ready(function() {
 			if ($(window).width() <= 960) {
 				$(this).toggleClass('is-active');
 				modal.slideToggle();
-
-			} else if( $(window).width() > 960 ){
+			} else {
 				items.removeClass('is-active');
 				wrap.toggleClass('is-active');
 				modal.slideToggle();

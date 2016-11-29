@@ -51,14 +51,42 @@ h4
 	line-height: 1.3
 
 .pink-btn
+	position: relative
 	border-radius: 24px
-	background-color: $pink
 	color: $white
+	background-color: $pink
 	+bla
 	font-size: 11px
 	text-transform: uppercase
-	transition: all .2s ease
+	transition: all 0.3s ease-in
+	box-sizing: border-box
+	&::before,
+	&::after
+		content: ''
+		z-index: -1
+		border-radius: inherit
+		pointer-events: none
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		-webkit-backface-visibility: hidden
+		transition: transform 0.3s, opacity 0.3s
+		transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1)
+	&::before
+		border: 2px solid $pink
+		opacity: 0
+		-webkit-transform: scale3d(1.2, 1.2, 1)
+		transform: scale3d(1.2, 1.2, 1)
 	&:hover
-		background-color: $white
-		box-shadow: inset -3px 3px 6px 1px $pink
+		background-color: transparent
 		color: $pink
+		&::before
+			opacity: 1
+			-webkit-transform: scale3d(1, 1, 1)
+			transform: scale3d(1, 1, 1)
+		&::after
+			opacity: 0
+			-webkit-transform: scale3d(0.8, 0.8, 1)
+			transform: scale3d(0.8, 0.8, 1)
